@@ -1,0 +1,22 @@
+{% extends 'reddit/base.html' %}
+
+{% block content %}
+
+<div class="center">
+    <p>Posted by: {{ post.user }} at: {{ post.created_at }}</p>
+    <h4>{{ post.title }}</h4>
+    <p>{{ post.content }}</p>
+    <p>{{ post.vote_total}} likes</p>
+
+    <h3>Comments <a href="{% url 'comment_create' pk=post.pk %}">(+)</a></h3>
+    <ul id="comms">
+        {% for comment in post.comments.all %}
+            <div class="contain">
+                {{ comment.user }} {{ comment.vote_total }}points
+                {{ comment.content }}
+                <a href="{% url 'comment_edit' id=comment.id %}">Edit</a> <a href="{% url 'comment_delete' id=comment.id %}" class="delete">Delete</a>
+            </div>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

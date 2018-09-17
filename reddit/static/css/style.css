@@ -1,0 +1,28 @@
+#logo{
+    width: 100px;
+    height: auto;
+}
+
+.posts{
+    text-align: center;
+    margin: 0 30%;
+}
+
+.contain{
+    background-color:#F5F5F5;
+    margin: 1em 0;
+}
+
+.center{
+    text-align: center;
+}
+
+#sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#cont{
+    padding: 60px;
+}

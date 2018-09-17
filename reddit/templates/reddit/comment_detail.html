@@ -1,0 +1,10 @@
+{% extends 'reddit/base.html' %}
+
+{% block content %}
+
+<h4>{{ comment.created_at }}</h4>
+<h2>{{ comment.title }}</h2>
+<h4>{{ comment.user }}</h4>
+<h4>{{ comment.content }}</h4>
+
+{% endblock %}
